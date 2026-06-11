@@ -6,14 +6,6 @@ export default defineNuxtConfig({
     'nuxt-lucide-icons'
   ],
 
-  googleFonts: {
-    families: {
-      'DynaPuff': [400, 500, 600, 700],
-      'Courgette': [400]
-    },
-    display: 'swap'
-  },
-
   devtools: {
     enabled: true
   },
@@ -33,5 +25,13 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
+  },
+
+  googleFonts: {
+    families: {
+      DynaPuff: [400, 500, 600, 700],
+      Courgette: [400]
+    },
+    display: 'swap'
   }
 })
