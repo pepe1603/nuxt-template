@@ -11,23 +11,23 @@
 
         <div class="flex items-center gap-4">
           <NuxtLink
+            to="/"
+            class="text-sm text-(--ui-text-muted) hover:text-(--ui-text) transition-colors"
+          >
+            Inicio
+          </NuxtLink>
+          <NuxtLink
             to="/examples"
             class="text-sm text-(--ui-text-muted) hover:text-(--ui-text) transition-colors"
           >
             Ejemplos
-          </NuxtLink>
-          <NuxtLink
-            to="/terminal"
-            class="text-sm text-(--ui-text-muted) hover:text-(--ui-text) transition-colors"
-          >
-            Terminal
           </NuxtLink>
           <UColorModeButton />
         </div>
       </div>
     </header>
 
-    <main class="mx-auto min-h-screen max-w-7xl px-4 pt-20 pb-8 sm:px-6 lg:px-8">
+    <main class="mx-auto min-h-screen max-w-7xl px-4 pt-24 pb-8 sm:px-6 lg:px-8">
       <slot />
     </main>
   </UApp>

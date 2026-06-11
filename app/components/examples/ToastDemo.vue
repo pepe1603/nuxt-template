@@ -150,21 +150,24 @@ const showToastWithMultipleActions = () => {
         </div>
       </template>
 
-      <pre class="text-xs overflow-x-auto text-(--ui-text-muted)"><code>const toast = useToast()
-
-toast.add({
-  title: 'Archivo eliminado',
-  description: 'Se movió a la papelera',
-  icon: 'i-lucide-trash-2',
-  actions: [
-    {
-      label: 'Deshacer',
-      variant: 'solid',
-      color: 'primary',
-      onClick: () => { ... }
-    }
-  ]
-})</code></pre>
+      <pre class="text-xs overflow-x-auto text-(--ui-text-muted)">
+        <code>
+          const toast = useToast()
+          toast.add({
+            title: 'Archivo eliminado',
+            description: 'Se movió a la papelera',
+            icon: 'i-lucide-trash-2',
+            actions: [
+              {
+                label: 'Deshacer',
+                variant: 'solid',
+                color: 'primary',
+                onClick: () => { ... }
+              }
+            ]
+          })
+        </code>
+      </pre>
     </UCard>
   </div>
 </template>
