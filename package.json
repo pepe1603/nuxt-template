@@ -1,10 +1,13 @@
 {
-  "name": "only-truths",
+  "name": "__PROJECT_NAME__",
+  "description": "__DESCRIPTION__",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
+    "init-project": "node scripts/init-project.js",
     "dev": "nuxt dev",
+    "build": "nuxt build",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
