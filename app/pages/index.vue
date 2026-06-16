@@ -12,5 +12,60 @@
     >
       Start !
     </UButton>
+
+    <USeparator />
+
+   <TypewriterText
+  :items="messages"
+/>
+
+<TypewriterText
+  :items="[
+    {
+      text: 'No se encontraron registros.'
+    }
+  ]"
+  :loop="false"
+  :erase-before-restart="false"
+/>
+
+<TypewriterText
+  :items="[
+    {
+      text: 'Paso 1: Configura tu cuenta.'
+    },
+    {
+      text: 'Paso 2: Conecta tu API.'
+    },
+    {
+      text: 'Paso 3: Despliega tu proyecto.'
+    }
+  ]"
+/>
   </div>
 </template>
+
+<script setup>
+const messages = [
+  {
+    text: 'Construimos experiencias digitales modernas.',
+    typingSpeed: 35,
+    pauseAfter: 2000
+  },
+  {
+    text: 'Aplicaciones web rápidas, escalables y mantenibles.',
+    typingSpeed: 30,
+    pauseAfter: 2500
+  },
+  {
+    text: 'Especializados en Nuxt 4, TypeScript y arquitecturas modernas.',
+    typingSpeed: 25,
+    pauseAfter: 3000
+  },
+  {
+    text: 'Eso es todo por el momento.',
+    typingSpeed: 50,
+    pauseAfter: 5000
+  }
+]
+</script>

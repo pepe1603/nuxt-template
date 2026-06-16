@@ -22,6 +22,12 @@
           >
             Terminal
           </NuxtLink>
+          <NuxtLink
+            to="/landing"
+            class="text-sm text-(--ui-text-muted) hover:text-(--ui-text) transition-colors"
+          >
+            Landing
+          </NuxtLink>
           <UColorModeButton />
         </div>
       </div>

@@ -4,6 +4,7 @@ export default defineNuxtConfig({
       title: "__APP_TITLE__",
     },
   },
+
   modules: [
     "@nuxt/eslint",
     "@nuxt/ui",
@@ -14,6 +15,17 @@ export default defineNuxtConfig({
   devtools: {
     enabled: false,
   },
+
+  components: [
+    {
+      path: '~/components',
+      ignore: ['**/ui/typewriter/**'],
+    },
+    {
+      path: '~/components/ui/typewriter',
+      pathPrefix: false,
+    },
+  ],
 
   css: ["~/assets/css/main.css"],
 
