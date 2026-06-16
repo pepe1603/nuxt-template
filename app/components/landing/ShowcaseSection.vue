@@ -1,11 +1,17 @@
 <template>
   <section class="py-24 px-6 bg-gray-950">
     <div class="max-w-6xl mx-auto space-y-10">
-
       <!-- Cabecera -->
       <div class="text-center space-y-3">
-        <UBadge label="En acción" color="primary" variant="subtle" size="lg" />
-        <h2 class="text-4xl font-bold">Míralo funcionar</h2>
+        <UBadge
+          label="En acción"
+          color="primary"
+          variant="subtle"
+          size="lg"
+        />
+        <h2 class="text-4xl font-bold">
+          Míralo funcionar
+        </h2>
         <p class="text-gray-400 text-lg max-w-xl mx-auto">
           Navega entre vistas sin salir de la landing —
           renderizado dinámico con
@@ -26,38 +32,41 @@
           "
           @click="activeView = view.id"
         >
-          <UIcon :name="view.icon" class="w-4 h-4" />
+          <UIcon
+            :name="view.icon"
+            class="w-4 h-4"
+          />
           {{ view.label }}
         </button>
       </nav>
 
       <!-- Contenedor de la vista activa -->
       <div class="min-h-80 rounded-2xl border border-gray-800 bg-gray-900 p-8 overflow-hidden">
-
         <!-- Transición suave entre vistas -->
-        <Transition name="fade-slide" mode="out-in">
+        <Transition
+          name="fade-slide"
+          mode="out-in"
+        >
           <component
             :is="currentComponent"
             :key="activeView"
           />
         </Transition>
-
       </div>
-
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import DesignView      from './showcase/DesignView.vue'
+import DesignView from './showcase/DesignView.vue'
 import PerformanceView from './showcase/PerformanceView.vue'
-import CommunityView   from './showcase/CommunityView.vue'
+import CommunityView from './showcase/CommunityView.vue'
 
 // --- Definición de vistas ---
 const views = [
-  { id: 'design',      label: 'Diseño',      icon: 'i-lucide-palette', component: DesignView      },
-  { id: 'performance', label: 'Performance',  icon: 'i-lucide-zap',     component: PerformanceView },
-  { id: 'community',   label: 'Comunidad',    icon: 'i-lucide-users',   component: CommunityView   },
+  { id: 'design', label: 'Diseño', icon: 'i-lucide-palette', component: DesignView },
+  { id: 'performance', label: 'Performance', icon: 'i-lucide-zap', component: PerformanceView },
+  { id: 'community', label: 'Comunidad', icon: 'i-lucide-users', component: CommunityView }
 ] as const
 
 type ViewId = typeof views[number]['id']

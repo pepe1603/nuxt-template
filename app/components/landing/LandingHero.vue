@@ -4,24 +4,6 @@ defineProps<{
   subtitle: string
   description: string
 }>()
-
-const heroTexts = [
-  {
-    text: 'Transformamos ideas en productos digitales.',
-    typingSpeed: 25,
-    pauseAfter: 2000
-  },
-  {
-    text: 'Desarrollo Full Stack con Nuxt, Laravel y PostgreSQL.',
-    typingSpeed: 20,
-    pauseAfter: 2500
-  },
-  {
-    text: 'Interfaces modernas, accesibles y optimizadas.',
-    typingSpeed: 18,
-    pauseAfter: 3000
-  }
-]
 </script>
 
 <template>

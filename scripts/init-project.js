@@ -9,7 +9,7 @@ const rl = readline.createInterface({
   output: process.stdout
 })
 
-const ask = (question) =>
+const ask = question =>
   new Promise(resolve => rl.question(question, resolve))
 
 const askRequired = async (question) => {
@@ -79,24 +79,24 @@ async function main() {
     await askRequired('Project name: ')
   )
 
-  const description =
-    await askRequired('Description: ')
+  const description
+    = await askRequired('Description: ')
 
-  const appTitle =
-    await askRequired('App title: ')
+  const appTitle
+    = await askRequired('App title: ')
 
   section('Branding')
 
-  const primary =
-    await askRequired('Primary color: ')
+  const primary
+    = await askRequired('Primary color: ')
 
-  const neutral =
-    await askRequired('Neutral color: ')
+  const neutral
+    = await askRequired('Neutral color: ')
 
   section('Author')
 
-  const author =
-    await askRequired('Author: ')
+  const author
+    = await askRequired('Author: ')
 
   section('Git')
 
@@ -124,12 +124,12 @@ async function main() {
   }
 
   const variables = {
-    '__PROJECT_NAME__': projectName,
-    '__DESCRIPTION__': description,
-    '__APP_TITLE__': appTitle,
-    '__PRIMARY_COLOR__': primary,
-    '__NEUTRAL_COLOR__': neutral,
-    '__AUTHOR__': author
+    __PROJECT_NAME__: projectName,
+    __DESCRIPTION__: description,
+    __APP_TITLE__: appTitle,
+    __PRIMARY_COLOR__: primary,
+    __NEUTRAL_COLOR__: neutral,
+    __AUTHOR__: author
   }
 
   section('Generating Files')
@@ -200,9 +200,9 @@ NUXT_PUBLIC_AUTHOR=
   success('Generated .env.example')
 
   if (
-    initGit === '' ||
-    initGit === 'y' ||
-    initGit === 'yes'
+    initGit === ''
+    || initGit === 'y'
+    || initGit === 'yes'
   ) {
     try {
       if (!fs.existsSync('./.git')) {
@@ -254,8 +254,8 @@ NUXT_PUBLIC_AUTHOR=
       'utf8'
     )
 
-    const placeholders =
-      findPlaceholders(content)
+    const placeholders
+      = findPlaceholders(content)
 
     if (placeholders.length) {
       remaining.push({

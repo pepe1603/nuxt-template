@@ -1,9 +1,13 @@
-
 <template>
   <div class="space-y-6">
     <div class="flex items-center gap-3">
-      <UIcon name="i-lucide-palette" class="text-primary-400 w-8 h-8" />
-      <h3 class="text-2xl font-bold">Sistema de Diseño</h3>
+      <UIcon
+        name="i-lucide-palette"
+        class="text-primary-400 w-8 h-8"
+      />
+      <h3 class="text-2xl font-bold">
+        Sistema de Diseño
+      </h3>
     </div>
 
     <p class="text-gray-400">
@@ -23,11 +27,30 @@
     </div>
 
     <div class="flex gap-3 flex-wrap pt-2">
-      <UButton label="Primary"  color="primary"  />
-      <UButton label="Neutral"  color="neutral"  variant="soft"    />
-      <UButton label="Success"  color="success"  variant="outline" />
-      <UButton label="Warning"  color="warning"  variant="ghost"   />
-      <UButton label="Error"    color="error"    variant="subtle"  />
+      <UButton
+        label="Primary"
+        color="primary"
+      />
+      <UButton
+        label="Neutral"
+        color="neutral"
+        variant="soft"
+      />
+      <UButton
+        label="Success"
+        color="success"
+        variant="outline"
+      />
+      <UButton
+        label="Warning"
+        color="warning"
+        variant="ghost"
+      />
+      <UButton
+        label="Error"
+        color="error"
+        variant="subtle"
+      />
     </div>
   </div>
 </template>
@@ -38,6 +61,6 @@ const colorShades = [
   { label: '700', bg: 'bg-primary-700' },
   { label: '500', bg: 'bg-primary-500' },
   { label: '300', bg: 'bg-primary-300' },
-  { label: '100', bg: 'bg-primary-100' },
+  { label: '100', bg: 'bg-primary-100' }
 ]
 </script>

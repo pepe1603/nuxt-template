@@ -9,12 +9,18 @@
           Only Truths
         </NuxtLink>
 
-        <div class="flex items-center gap-4">
+        <nav class="flex items-center gap-4">
           <NuxtLink
             to="/"
             class="text-sm text-(--ui-text-muted) hover:text-(--ui-text) transition-colors"
           >
             Inicio
+          </NuxtLink>
+          <NuxtLink
+            to="/landing"
+            class="text-sm text-(--ui-text-muted) hover:text-(--ui-text) transition-colors"
+          >
+            Landing
           </NuxtLink>
           <NuxtLink
             to="/examples"
@@ -23,7 +29,7 @@
             Ejemplos
           </NuxtLink>
           <UColorModeButton />
-        </div>
+        </nav>
       </div>
     </header>
 

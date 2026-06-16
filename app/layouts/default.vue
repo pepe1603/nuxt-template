@@ -9,7 +9,13 @@
           Only Truths
         </NuxtLink>
 
-        <div class="flex items-center gap-4">
+        <nav class="flex items-center gap-4">
+          <NuxtLink
+            to="/landing"
+            class="text-sm text-(--ui-text-muted) hover:text-(--ui-text) transition-colors"
+          >
+            Landing
+          </NuxtLink>
           <NuxtLink
             to="/examples"
             class="text-sm text-(--ui-text-muted) hover:text-(--ui-text) transition-colors"
@@ -22,14 +28,8 @@
           >
             Terminal
           </NuxtLink>
-          <NuxtLink
-            to="/landing"
-            class="text-sm text-(--ui-text-muted) hover:text-(--ui-text) transition-colors"
-          >
-            Landing
-          </NuxtLink>
           <UColorModeButton />
-        </div>
+        </nav>
       </div>
     </header>
 
